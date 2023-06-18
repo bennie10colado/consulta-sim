@@ -8,3 +8,16 @@
 
   <%= button_to "Destroy this paciente", @paciente, method: :delete %>
 </div>
+
+<h2>Endereço</h2>
+<% if @paciente.endereco %>
+  <p><strong>CEP:</strong> <%= @paciente.endereco.CEP %></p>
+  <p><strong>Cidade:</strong> <%= @paciente.endereco.cidade %></p>
+  <p><strong>Bairro:</strong> <%= @paciente.endereco.bairro %></p>
+  <p><strong>Logradouro:</strong> <%= @paciente.endereco.logradouro %></p>
+  <p><strong>Complemento:</strong> <%= @paciente.endereco.complemento %></p>
+<% else %>
+  <p>O paciente não possui endereço cadastrado.</p>
+<% end %>
+
+

@@ -13,6 +13,7 @@ class PacientesController < ApplicationController
   # GET /pacientes/new
   def new
     @paciente = Paciente.new
+    @paciente.build_endereco
   end
 
   # GET /pacientes/1/edit
@@ -22,6 +23,7 @@ class PacientesController < ApplicationController
   # POST /pacientes or /pacientes.json
   def create
     @paciente = Paciente.new(paciente_params)
+    @paciente.endereco = Endereco.new(endereco_params)
 
     respond_to do |format|
       if @paciente.save
@@ -37,7 +39,7 @@ class PacientesController < ApplicationController
   # PATCH/PUT /pacientes/1 or /pacientes/1.json
   def update
     respond_to do |format|
-      if @paciente.update(paciente_params)
+      if @paciente.update(paciente_params) && @paciente.endereco.update(endereco_params)
         format.html { redirect_to paciente_url(@paciente), notice: "Paciente was successfully updated." }
         format.json { render :show, status: :ok, location: @paciente }
       else
@@ -59,12 +61,16 @@ class PacientesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_paciente
-      @paciente = Paciente.find(params[:id])
-    end
+  def set_paciente
+    @paciente = Paciente.find(params[:id])
+  end
 
     # Only allow a list of trusted parameters through.
-    def paciente_params
-      params.require(:paciente).permit(:nome_completo, :data_nascimento, :CPF, :email)
-    end
+  def paciente_params
+    params.require(:paciente).permit(:nome_completo, :data_nascimento, :CPF, :email)
+  end
+
+  def endereco_params
+    params.require(:endereco).permit(:CEP, :cidade, :bairro, :logradouro, :complemento)
+  end
 end

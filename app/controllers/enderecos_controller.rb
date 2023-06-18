@@ -13,6 +13,7 @@ class EnderecosController < ApplicationController
   # GET /enderecos/new
   def new
     @endereco = Endereco.new
+    # @endereco.paciente_id = params[:paciente_id] #nao sei se deve-se criar o paciente_id novamente com o scaffold
   end
 
   # GET /enderecos/1/edit
@@ -25,6 +26,7 @@ class EnderecosController < ApplicationController
 
     respond_to do |format|
       if @endereco.save
+        redirect_to @endereco.paciente, notice: 'Endereço was successfully created.'
         format.html { redirect_to endereco_url(@endereco), notice: "Endereco was successfully created." }
         format.json { render :show, status: :created, location: @endereco }
       else
