@@ -6,16 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="23d1baf4-e287-4f77-926f-feb9e295246c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/enderecos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/enderecos_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/pacientes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pacientes_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/endereco.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/endereco.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/paciente.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/paciente.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/enderecos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/enderecos/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/pacientes/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pacientes/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pacientes/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pacientes/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20230618060516_create_enderecos.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20230618060516_create_enderecos.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +143,7 @@
       <workItem from="1687064976420" duration="1392000" />
       <workItem from="1687106039651" duration="1695000" />
       <workItem from="1687112900026" duration="878000" />
-      <workItem from="1687113799395" duration="2702000" />
+      <workItem from="1687113799395" duration="3204000" />
     </task>
     <servers />
   </component>
@@ -171,6 +162,6 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/consulta_sim@Development__consulta_sim.rcov" NAME="Development: consulta-sim Coverage Results" MODIFIED="1687116415691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="consulta-sim" />
+    <SUITE FILE_PATH="coverage/consulta_sim@Development__consulta_sim.rcov" NAME="Development: consulta-sim Coverage Results" MODIFIED="1687116963906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="consulta-sim" />
   </component>
 </project>
