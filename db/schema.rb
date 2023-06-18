@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_18_055606) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_18_060516) do
+  create_table "enderecos", force: :cascade do |t|
+    t.string "CEP"
+    t.string "cidade"
+    t.string "bairro"
+    t.string "logradouro"
+    t.string "complemento"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "pacientes", force: :cascade do |t|
     t.string "nome_completo"
     t.date "data_nascimento"
