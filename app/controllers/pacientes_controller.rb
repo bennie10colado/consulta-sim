@@ -59,18 +59,46 @@ class PacientesController < ApplicationController
     end
   end
 
+  def agendar_consulta
+    @paciente = Paciente.find(params[:id])
+    @consulta = @paciente.consultums.build(consultum_params)
+
+    if @consulta.save
+      redirect_to @paciente, notice: 'Consulta agendada com sucesso.'
+    else
+      render :show
+    end
+  end
+
+
+  def criar_consulta
+    @paciente = Paciente.find(params[:id])
+    @consulta = @paciente.consultums.build(consultum_params)
+
+    if @consulta.save
+      redirect_to paciente_path(@paciente), notice: 'Consulta agendada com sucesso.'
+    else
+      @medicos = Medico.all
+      render :agendar_consulta
+    end
+  end
+
   private
-    # Use callbacks to share common setup or constraints between actions.
+  # Use callbacks to share common setup or constraints between actions.
   def set_paciente
     @paciente = Paciente.find(params[:id])
   end
 
-    # Only allow a list of trusted parameters through.
+  # Only allow a list of trusted parameters through.
   def paciente_params
     params.require(:paciente).permit(:nome_completo, :data_nascimento, :CPF, :email)
   end
 
   def endereco_params
     params.require(:endereco).permit(:CEP, :cidade, :bairro, :logradouro, :complemento)
+  end
+
+  def consultum_params
+    params.require(:consulta).permit(:data, :horario, :medico_id)
   end
 end

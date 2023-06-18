@@ -22,6 +22,7 @@ class ConsultaController < ApplicationController
   # POST /consulta or /consulta.json
   def create
     @consultum = Consultum.new(consultum_params)
+    #@consultum.paciente = Paciente.find(paciente_params)
 
     respond_to do |format|
       if @consultum.save

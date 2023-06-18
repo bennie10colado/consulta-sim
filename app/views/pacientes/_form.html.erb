@@ -33,7 +33,7 @@
 
   <div>
     <!-- Campos do Endereço. -->
-    <%= fields_for :endereco, @paciente.endereco do |endereco_form| %>
+    <%= form.fields_for :endereco, @paciente.endereco do |endereco_form| %>
       <h2>Endereço</h2>
       <div>
         <%= endereco_form.label :CEP, style: "display: block" %>
@@ -61,4 +61,5 @@
   <div>
     <%= form.submit %>
   </div>
+
 <% end %>

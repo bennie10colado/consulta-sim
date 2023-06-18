@@ -2,9 +2,23 @@
 
 <%= render @medico %>
 
+<% if @medico.consultums.any? %>
+  <h2>Consultas agendadas para <%= @medico.nome_completo %></h2>
+  <ul>
+    <% @medico.consultums.each do |consulta| %>
+      <li>
+        Data: <%= consulta.data %><br>
+        Horário: <%= consulta.horario %><br>
+        Paciente: <%= consulta.paciente.nome_completo %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Não há consultas agendadas para <%= @medico.nome_completo %>.</p>
+<% end %>
+
 <div>
   <%= link_to "Edit this medico", edit_medico_path(@medico) %> |
   <%= link_to "Back to medicos", medicos_path %>
-
   <%= button_to "Destroy this medico", @medico, method: :delete %>
 </div>
