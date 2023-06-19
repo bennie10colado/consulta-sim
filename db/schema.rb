@@ -23,6 +23,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_18_194144) do
   end
 
   create_table "enderecos", force: :cascade do |t|
+    t.integer "paciente_id"
+    t.integer "{:null=>false, :foreign_keys=>true}_id"
     t.string "CEP"
     t.string "cidade"
     t.string "bairro"
@@ -30,8 +32,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_18_194144) do
     t.string "complemento"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "paciente_id", null: false
     t.index ["paciente_id"], name: "index_enderecos_on_paciente_id"
+    t.index ["{:null=>false, :foreign_keys=>true}_id"], name: "index_enderecos_on_{:null=>false, :foreign_keys=>true}_id"
   end
 
   create_table "medicos", force: :cascade do |t|
@@ -55,5 +57,4 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_18_194144) do
 
   add_foreign_key "consulta", "medicos"
   add_foreign_key "consulta", "pacientes"
-  add_foreign_key "enderecos", "pacientes"
 end

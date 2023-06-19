@@ -22,12 +22,14 @@ class PacientesController < ApplicationController
 
   # POST /pacientes or /pacientes.json
   def create
+    puts paciente_params
+    puts endereco_params
     @paciente = Paciente.new(paciente_params)
-    @paciente.endereco = Endereco.new(endereco_params)
+    @paciente.build_endereco(endereco_params)
 
     respond_to do |format|
       if @paciente.save
-        format.html { redirect_to paciente_url(@paciente), notice: "Paciente was successfully created." }
+        format.html { redirect_to paciente_url(@paciente), notice: "Paciente was successfully created with Endereco." }
         format.json { render :show, status: :created, location: @paciente }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -70,19 +72,6 @@ class PacientesController < ApplicationController
     end
   end
 
-
-  def criar_consulta
-    @paciente = Paciente.find(params[:id])
-    @consulta = @paciente.consultums.build(consultum_params)
-
-    if @consulta.save
-      redirect_to paciente_path(@paciente), notice: 'Consulta agendada com sucesso.'
-    else
-      @medicos = Medico.all
-      render :agendar_consulta
-    end
-  end
-
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_paciente
@@ -95,7 +84,7 @@ class PacientesController < ApplicationController
   end
 
   def endereco_params
-    params.require(:endereco).permit(:CEP, :cidade, :bairro, :logradouro, :complemento)
+    params.require(:paciente).permit(:CEP, :cidade, :bairro, :logradouro, :complemento)
   end
 
   def consultum_params

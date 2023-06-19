@@ -1,10 +1,10 @@
-<%= form_with(model: @paciente) do |form| %>
-  <% if @paciente.errors.any? %>
+<%= form_with(model: paciente) do |form| %>
+  <% if paciente.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(@paciente.errors.count, "error") %> prohibited this paciente from being saved:</h2>
+      <h2><%= pluralize(paciente.errors.count, "error") %> prohibited this paciente from being saved:</h2>
 
       <ul>
-        <% @paciente.errors.each do |error| %>
+        <% paciente.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
@@ -17,8 +17,8 @@
   </div>
 
   <div>
-    <%= form.label :data_de_nascimento, style: "display: block" %>
-    <%= form.date_field :data_de_nascimento %>
+    <%= form.label :data_nascimento, style: "display: block" %>
+    <%= form.date_field :data_nascimento %>
   </div>
 
   <div>
@@ -31,35 +31,35 @@
     <%= form.text_field :email %>
   </div>
 
-  <div>
-    <!-- Campos do Endereço. -->
-    <%= form.fields_for :endereco, @paciente.endereco do |endereco_form| %>
-      <h2>Endereço</h2>
-      <div>
-        <%= endereco_form.label :CEP, style: "display: block" %>
-        <%= endereco_form.text_field :CEP %>
-      </div>
-      <div>
-        <%= endereco_form.label :cidade, style: "display: block" %>
-        <%= endereco_form.text_field :cidade %>
-      </div>
-      <div>
-        <%= endereco_form.label :bairro, style: "display: block" %>
-        <%= endereco_form.text_field :bairro %>
-      </div>
-      <div>
-        <%= endereco_form.label :logradouro, style: "display: block" %>
-        <%= endereco_form.text_field :logradouro %>
-      </div>
-      <div>
-        <%= endereco_form.label :complemento, style: "display: block" %>
-        <%= endereco_form.text_field :complemento %>
-      </div>
-    <% end %>
-  </div>
+  <h2>Endereco</h2>
+  <!-- Como puxar o form de Endereco para o form dentro de Paciente? nao sei se o erro é que existe a pasta enderecos "sobrando" -->
+
+    <div>
+      <%= form.label :CEP, style: "display: block" %>
+      <%= form.text_field :CEP %>
+    </div>
+
+    <div>
+      <%= form.label :cidade, style: "display: block" %>
+      <%= form.text_field :cidade %>
+    </div>
+
+    <div>
+      <%= form.label :bairro, style: "display: block" %>
+      <%= form.text_field :bairro %>
+    </div>
+
+    <div>
+      <%= form.label :logradouro, style: "display: block" %>
+      <%= form.text_field :logradouro %>
+    </div>
+
+    <div>
+      <%= form.label :complemento, style: "display: block" %>
+      <%= form.text_field :complemento %>
+    </div>
 
   <div>
     <%= form.submit %>
   </div>
-
 <% end %>
