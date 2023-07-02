@@ -12,9 +12,18 @@ class MedicoTest < ActiveSupport::TestCase
     assert_not medico.save, "Salvar medico com nome menor que 5 caracteres (não foi salvo)"
   end
 
-  test "nome completo do médico não pode conter numeros ou caracteres especiais" do
-    medico = Medico.new(nome_completo: 'Jô Soares 123!')
+  test "nome completo do médico não pode conter numeros" do
+    medico = Medico.new(nome_completo: 'Jô Soares 123')
     assert_not medico.save, "Salvar medico com nome com numeros (não foi salvo)"
   end
 
+  test "nome completo do médico não pode conter caracteres especiais" do
+    medico = Medico.new(nome_completo: 'Jô Soares!')
+    assert_not medico.save, "Salvar medico com nome com caractere especial (não foi salvo)"
+  end
+
+  test "salvar medico valido" do
+    medico = Medico.new(nome_completo: 'Jô Soares', CPF: "11111111119", email: "email_medico@email.com", especialidade: "ornitorrinco", CRM: "234567")
+    assert medico.save, "Salvar medico valido"
+  end
 end
