@@ -10,5 +10,14 @@
       <jdbc-url>jdbc:sqlite:C:\Users\ben\Desktop\Benjamin\GITHUB\consulta-sim\db\development.sqlite3</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="Rails consulta-sim: test" uuid="5cebddf8-f288-4152-82f1-f4d62b1aa378">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\ben\Desktop\Benjamin\GITHUB\consulta-sim\db\test.sqlite3</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
