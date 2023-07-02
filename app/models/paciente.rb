@@ -4,9 +4,9 @@ class Paciente < ApplicationRecord
   validates :CPF, presence: true, length: {is: 11}, format: {without: /\A[a-zA-Z]\z/}, uniqueness: true
   validates :email, presence: true, length: {minimum: 4}, uniqueness: true, format: {with: /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i}
 
-  has_one :endereco, :dependent => :destroy
+  has_one :endereco, dependent: :destroy
   has_many :consultums
-  has_many :medicos, :through =>:consultums
+  has_many :medicos, through: :consultums
 
   accepts_nested_attributes_for :endereco
   accepts_nested_attributes_for :consultums
