@@ -1,5 +1,3 @@
-# consulta-sim/test/models/medico_test.rb
-
 require 'test_helper'
 
 class MedicoTest < ActiveSupport::TestCase
