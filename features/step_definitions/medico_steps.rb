@@ -15,9 +15,14 @@ When('I fill all the fields Nome completo: {string}, cpf: {string}, Email: {stri
   fill_in 'CRM', with: crm
 end
 
+When('I click on "Create Medico"') do
+  click_button "Create Medico"
+end
+
 Then('I should see the message "Medico was successfully created"') do |message|
   expect(page).to have_content(message)
 end
+
 
 
 
@@ -32,14 +37,24 @@ When('I click on "Medicos"') do
   click_link "Medicos"
 end
 
-When('I click on "Show this medico"') do
-  click_link "Show this medico"
+Given('Exists one doctor registered in the system') do
+  Medico.create(
+    nome_completo: "Jotinha",
+    CPF: "12345678910",
+    email: "jotinhaa@email.com",
+    especialidade: "Cardiologia",
+    CRM: "123459"
+  )
 end
 
-Then('the page should display either the appointments or the message "Não há consultas agendadas para"') do |message|
+When('I click on "{string}"') do |botao|
+  click_on "d-#{botao}"
+end
+
+Then('the page should display either the appointments or the message "Não há consultas agendadas para"') do
   if page.has_content?('Consultas agendadas para')
     expect(page).to have_selector('.appointment-item')
   else
-    expect(page).to have_content(message)
+    expect(page).to have_content("Não há consultas agendadas para")
   end
 end
