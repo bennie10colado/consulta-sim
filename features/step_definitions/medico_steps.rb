@@ -19,11 +19,27 @@ Then('I should see the message "Medico was successfully created"') do |message|
   expect(page).to have_content(message)
 end
 
-And(/^I click on "([^"]*)"$/) do |_|
-  pending
-end
-
 
 
 
 #Scenery 2
+
+Given('I am on the home page') do
+  visit root_path
+end
+
+When('I click on "Medicos"') do
+  click_link "Medicos"
+end
+
+When('I click on "Show this medico"') do
+  click_link "Show this medico"
+end
+
+Then('the page should display either the appointments or the message "Não há consultas agendadas para"') do |message|
+  if page.has_content?('Consultas agendadas para')
+    expect(page).to have_selector('.appointment-item')
+  else
+    expect(page).to have_content(message)
+  end
+end

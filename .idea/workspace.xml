@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23d1baf4-e287-4f77-926f-feb9e295246c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/consulta-sim.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/consulta-sim.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/development.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/medico.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/medico.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/step_definitions/medico_steps.rb" beforeDir="false" afterPath="$PROJECT_DIR$/features/step_definitions/medico_steps.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +204,7 @@
       <workItem from="1688167058998" duration="1244000" />
       <workItem from="1688254086030" duration="4225000" />
       <workItem from="1688344947827" duration="1098000" />
-      <workItem from="1688346073138" duration="5907000" />
+      <workItem from="1688346073138" duration="6872000" />
     </task>
     <servers />
   </component>
@@ -226,7 +223,7 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/consulta_sim@Scenario__create_a_doctor.rcov" NAME="Scenario: create a doctor Coverage Results" MODIFIED="1688351457775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="consulta-sim" />
+    <SUITE FILE_PATH="coverage/consulta_sim@Scenario__create_a_doctor.rcov" NAME="Scenario: create a doctor Coverage Results" MODIFIED="1688352932163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="consulta-sim" />
     <SUITE FILE_PATH="coverage/consulta_sim@Development__consulta_sim.rcov" NAME="Development: consulta-sim Coverage Results" MODIFIED="1688347876462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="consulta-sim" />
   </component>
 </project>
