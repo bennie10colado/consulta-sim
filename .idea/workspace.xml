@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="23d1baf4-e287-4f77-926f-feb9e295246c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/medico.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/medico.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/step_definitions/medico_steps.rb" beforeDir="false" afterPath="$PROJECT_DIR$/features/step_definitions/medico_steps.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/paciente.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/paciente.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/step_definitions/paciente_steps.rb" beforeDir="false" afterPath="$PROJECT_DIR$/features/step_definitions/paciente_steps.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +239,7 @@
       <workItem from="1688167058998" duration="1244000" />
       <workItem from="1688254086030" duration="4225000" />
       <workItem from="1688344947827" duration="1098000" />
-      <workItem from="1688346073138" duration="13801000" />
+      <workItem from="1688346073138" duration="15601000" />
     </task>
     <servers />
   </component>
@@ -259,7 +259,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/consulta_sim@Scenario__create_a_doctor.rcov" NAME="Scenario: create a doctor Coverage Results" MODIFIED="1688352932163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="consulta-sim" />
-    <SUITE FILE_PATH="coverage/consulta_sim@paciente_feature.rcov" NAME="paciente.feature Coverage Results" MODIFIED="1688359552122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="consulta-sim" />
+    <SUITE FILE_PATH="coverage/consulta_sim@paciente_feature.rcov" NAME="paciente.feature Coverage Results" MODIFIED="1688360966214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="consulta-sim" />
     <SUITE FILE_PATH="coverage/consulta_sim@Development__consulta_sim.rcov" NAME="Development: consulta-sim Coverage Results" MODIFIED="1688347876462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="consulta-sim" />
   </component>
 </project>
